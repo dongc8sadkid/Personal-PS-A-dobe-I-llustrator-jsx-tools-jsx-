@@ -1,5 +1,7 @@
 # Personal-PS-A-dobe-I-llustrator-jsx-tools-jsx-
 我用管用你用不一定管用，一个组织有一个组织的痛点（捂嘴哭
+记得搭配Creative Cloud 插件商店的"ScripshonTrees" 食用，太太你也不想每次都Ctrl+F12吧
+
 # ArtboardRectangles 
 给AI(滚滚长江东逝水)文件里每个Artboard都画一个和Artboard一毛一样大的矩形，做Crease和Die-cut line用的
 
