@@ -25,3 +25,6 @@ License统统MIT，反正都是Claude写的，你充钱你也能写
 
 # ExportAtbd_PDF_New
 上一个"MultiArtboard_RegDots_NameNote"太长了（？）所以分了另一个脚本，如果你的.ai 里有太多复杂图像，尤其是纹理一大堆的司马像素图，记得删掉图像、仅保留cutting path、转存一个File Setup New2再来跑这个脚本
+
+# Grid_2_Lines
+你这咋都是双线呢.jpg
