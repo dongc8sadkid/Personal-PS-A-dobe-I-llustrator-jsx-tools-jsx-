@@ -28,3 +28,6 @@ License统统MIT，反正都是Claude写的，你充钱你也能写
 
 # Grid_2_Lines
 你这咋都是双线呢.jpg
+
+# ByNameCount
+低水平工作记忆adhd人专用外置大脑，Artboard名写成 A 9x， B 8x， C 7x 以此类推，脚本会找到你画板名里小写x前面的那个数字作为数量，帮你把个数复制出来
