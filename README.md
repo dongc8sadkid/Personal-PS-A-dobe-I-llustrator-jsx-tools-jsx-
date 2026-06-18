@@ -16,3 +16,9 @@
 
 # +Dot.jsx
 不知道咋介绍 孩子试工那天Manager教授的一切，在〇年后终于被我抽打Claude浓缩成了一个脚本
+
+# MultiArtboard_RegDots_NameNote
+省下给28个画板挨个放不重复的点来区分28套不同的cutting path的时间来跑FindRealSeam检查tiff吧（双手合十
+
+# ExportAtbd_PDF_New
+上一个"MultiArtboard_RegDots_NameNote"太长了（？）所以分了另一个脚本，如果你的.ai 里有太多复杂矢量图，记得删掉图像、仅保留cutting path、转存一个File Setup New2再来跑这个脚本
