@@ -1,3 +1,6 @@
+License统统MIT，反正都是Claude写的，你充钱你也能写 
+
+
 # Personal-PS-A-dobe-I-llustrator-jsx-tools-jsx-
 我用管用你用不一定管用，一个组织有一个组织的痛点（捂嘴哭
 记得搭配Creative Cloud 插件商店的"ScripshonTrees" 食用，太太你也不想每次都Ctrl+F12吧
