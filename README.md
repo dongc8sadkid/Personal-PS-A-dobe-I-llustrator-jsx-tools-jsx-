@@ -18,7 +18,7 @@ License统统MIT，反正都是Claude写的，你充钱你也能写
 全自动做色块，输入原始色值、要多大跨度、每步步长多大，自动帮你做出相近色色块，要几个出几个，带对应的色值标注，快速拿给客人match color（色值部分我已鞭打Claude Opus4.8令其使用真 DeviceCMYK 输出，色值不经 RGB 转换。）
 
 # +Dot.jsx
-不知道咋介绍 孩子试工那天Manager教授的一切，在〇年后终于被我抽打Claude浓缩成了一个脚本
+不知道咋介绍 孩子试工那天Manager教授的一切，在〇年后终于被我抽打Claude浓缩成了一个脚本，意思这个脚本的价值是安省的一份Minimum wage（喂
 
 # MultiArtboard_RegDots_NameNote
 省下给28个画板挨个放不重复的点来区分28套不同的cutting path的时间来跑FindRealSeam检查tiff吧（双手合十
