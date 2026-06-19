@@ -19,8 +19,8 @@
  *      (rectB object is skipped: end state == "build B, offset to C, delete B".)
  *   9. Active artboard -> rectC. Dots end up 0.125" inside the artboard (bleed).
  *  10. Stray-dot cleanup: checks Register layer only. Any K100 circle whose
- *      center is inside the Thru-cut bbox OR outside the final artboard is
- *      deleted. Safe: never touches customer artwork on other layers.
+ *      bbox TOUCHES the Thru-cut bbox (center need not be inside) OR whose center
+ *      is outside the final artboard is deleted. Never touches other layers.
  *  11. Before the save dialog: count how many separate pieces the Thru-cut layer
  *      will drop when fully cut (scoped to the FINAL artboard, which encloses the
  *      whole cut). Shown as "N closed + M grid cells = T pieces". Handles separate closed shapes
@@ -52,6 +52,11 @@
 
         dotDiameter_in: 0.235,
         maxGap_in: 24,       // max center-to-center spacing along an edge
+
+        // Stray-dot cleanup: a Register-layer K100 dot is removed if its bbox TOUCHES the
+        // Thru-cut bbox (no longer requires the center to be inside). This pad adds a little
+        // grazing tolerance. Legit reg dots sit ~0.14" off the cut bbox, so this is safe.
+        strayTouchPad_in: 0.01,
 
         // snap bands [lo, hi] -> target (inches)
         snapBands: [
@@ -268,9 +273,9 @@
     }
 
     // ===================== stray dot cleanup =====================
-    // Detects black circle-like PathItems whose CENTER is either:
-    //   (a) inside the Thru-cut bbox  — stray leftover / customer artifact
-    //   (b) outside the final artboard — fell off the edge
+    // Detects black circle-like PathItems that are either:
+    //   (a) TOUCHING the Thru-cut bbox  — bbox overlaps/grazes the cut (center need NOT be inside)
+    //   (b) outside the final artboard   — fell off the edge (center test)
     // "Black" = CMYK K>=50, Gray>=50, RGB<=50 each channel, or spot named "black"/"registration"
     // "Small"  = both w and h <= 1.5" (catches 0.235" reg dots; ignores big design circles)
     // "Circle" = w and h within 15% of each other
@@ -298,12 +303,16 @@
         return false;
     }
     function _isStrayPos(item, cutB, abRect) {
-        var b  = item.geometricBounds;
-        var cx = (b[0] + b[2]) / 2;
-        var cy = (b[1] + b[3]) / 2;
-        var inCut = cx > cutB[0]  && cx < cutB[2]  && cy < cutB[1]  && cy > cutB[3];
+        var b = item.geometricBounds;   // [left, top, right, bottom], y-up (top > bottom)
+        // (a) dot's bbox TOUCHES / overlaps the Thru-cut bbox (center no longer required inside).
+        //     Standard AABB intersection + a small pad so grazing contact still counts.
+        var pad = CFG.strayTouchPad_in * IN;
+        var touchCut = (b[0] <= cutB[2] + pad) && (b[2] >= cutB[0] - pad) &&
+                       (b[3] <= cutB[1] + pad) && (b[1] >= cutB[3] - pad);
+        // (b) center outside the final artboard — fell off the edge
+        var cx = (b[0] + b[2]) / 2, cy = (b[1] + b[3]) / 2;
         var outAB = cx < abRect[0] || cx > abRect[2] || cy > abRect[1] || cy < abRect[3];
-        return inCut || outAB;
+        return touchCut || outAB;
     }
     function cleanStrayDots(layers, cutB, abRect) {
         var victims = [];
