@@ -12,8 +12,11 @@ License统统MIT，反正都是Claude写的，你充钱你也能写
 全自动做色块，输入原始色值、要多大跨度、每步步长多大，自动帮你做出相近色色块，要几个出几个，带对应的色值标注，快速拿给客人match color（色值部分我已鞭打Claude Opus4.8令其使用真 DeviceCMYK 输出，色值不经 RGB 转换。）
 
 # 3_Add_Dot.jsx
-不知道咋介绍 孩子试工那天Manager教授的一切，在〇年后终于被我抽打Claude和GPT浓缩成了一个脚本，意思这个脚本的价值是安省的一份Minimum wage（。
-会数出来你当前画板里会thru-cut 出来几片东西，如果thru-cut的形状出现了crossing它就会蹦提示按你头回去重查
+不知道咋介绍 孩子试工那天Manager教授的一切，在〇年后终于被我抽打Claude和GPT浓缩成了一个脚本
+意思这个脚本的价值是安省的一份Minimum wage（。
+会抓取名为“Thru-cut”的图层里的path，依照它们来加Zund Register dot。请根据需要自行修改脚本里的图层名
+可以数出来你当前画板里会thru-cut 出来几片东西，可以依照料宽来Snap文件宽度。如果你的料宽不是48/49/53inch，使用时候需要你自行修改脚本
+如果thru-cut的形状出现了crossing、刀线跑出画板、会蹦提示按你头回去重查。
 
 # Grid_2_Lines
 你这咋都是双线呢.jpg
