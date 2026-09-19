@@ -1,15 +1,8 @@
 License统统MIT，反正都是Claude写的，你充钱你也能写 
 
-
-# Personal-PS-A-dobe-I-llustrator-jsx-tools-jsx-
-我用管用你用不一定管用，一个组织有一个组织的痛点（捂嘴哭
-记得搭配Creative Cloud 插件商店的"ScripshonTrees" 食用，太太你也不想每次都Ctrl+F12吧
-
 # ArtboardRectangles 
 给AI(滚滚长江东逝水)文件里每个Artboard都画一个和Artboard一毛一样大的矩形，做Crease和Die-cut line用的
 
-# WindSlit New
-给Banner画风洞，6x6寸的圆形砍掉上面一半，只剩下面一半，每隔大概27寸放一个，放完告诉你放多少个，Large Format Artboard适用，妈妈再也不怕你忙掉头的时候被跟单同事问”这个banner要放多少风洞呀”了
 
 # make_workorder(3)
 选定要制作工单的文件一键制作，做在8.5x11"的纸上，会抓取文件所在的文件夹作为材料名，你们公司和我司文件结构大概率不一样所以这玩意可能不适用（目移
@@ -21,14 +14,6 @@ License统统MIT，反正都是Claude写的，你充钱你也能写
 不知道咋介绍 孩子试工那天Manager教授的一切，在〇年后终于被我抽打Claude浓缩成了一个脚本，意思这个脚本的价值是安省的一份Minimum wage（。
 +dot+count是此脚本的升级版，会数出来你当前画板里会thru-cut 出来几片东西，如果thru-cut的形状出现了crossing它就会蹦提示按你头回去重查
 
-# MultiArtboard_RegDots_NameNote
-省下给28个画板挨个放不重复的点来区分28套不同的cutting path的时间来跑FindRealSeam检查tiff吧（双手合十
-
-# ExportAtbd_PDF_New
-上一个"MultiArtboard_RegDots_NameNote"太长了（？）所以分了另一个脚本，如果你的.ai 里有太多复杂图像，尤其是纹理一大堆的司马像素图，记得删掉图像、仅保留cutting path、转存一个File Setup New2再来跑这个脚本
-
 # Grid_2_Lines
 你这咋都是双线呢.jpg
 
-# ByNameCount
-低水平工作记忆adhd人专用外置大脑，Artboard名写成 A 9x， B 8x， C 7x 以此类推，脚本会找到你画板名里小写x前面的那个数字作为数量，帮你把个数复制出来
