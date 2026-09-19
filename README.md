@@ -1,4 +1,5 @@
 License统统MIT，反正都是Claude写的，你充钱你也能写 
+畸形PDF在我头上泼屎，屎里的有机物养育出了我头上的悲伤逻辑（？
 
 # ArtboardRectangles 
 给AI(滚滚长江东逝水)文件里每个Artboard都画一个和Artboard一毛一样大的矩形，做Crease和Die-cut line用的
